@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
+import { seededRange } from "@/lib/utils";
 
 export const AmbientBackground = () => {
   return (
@@ -44,11 +44,17 @@ export const AmbientBackground = () => {
             initial={{ opacity: 0 }}
             animate={{
               opacity: [0.1, 0.3, 0.1],
-              x: [Math.random() * 100 + "%", Math.random() * 100 + "%"],
-              y: [Math.random() * 100 + "%", Math.random() * 100 + "%"],
+              x: [
+                `${seededRange(i, 0, 0, 100)}%`,
+                `${seededRange(i, 1, 0, 100)}%`,
+              ],
+              y: [
+                `${seededRange(i, 2, 0, 100)}%`,
+                `${seededRange(i, 3, 0, 100)}%`,
+              ],
             }}
             transition={{
-              duration: 20 + Math.random() * 10,
+              duration: seededRange(i, 4, 20, 30),
               repeat: Infinity,
               ease: "linear",
             }}

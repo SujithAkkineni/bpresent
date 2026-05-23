@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Heart, Stars } from "lucide-react";
+import { seededRange } from "@/lib/utils";
 
 export const FinalSection = () => {
   return (
@@ -38,7 +39,7 @@ export const FinalSection = () => {
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             className="px-8 py-4 glass rounded-full text-sm tracking-widest uppercase hover:bg-white/5 transition-all"
           >
-            Made With Love 💫
+            from SUJITH AKKINENI 💫
           </button>
         </div>
       </motion.div>
@@ -52,14 +53,14 @@ export const FinalSection = () => {
             scale: [1, 1.5, 1],
           }}
           transition={{
-            duration: 2 + Math.random() * 3,
+            duration: seededRange(i, 0, 2, 5),
             repeat: Infinity,
-            delay: Math.random() * 5,
+            delay: seededRange(i, 1, 0, 5),
           }}
           className="absolute w-1 h-1 bg-white rounded-full bg-glow"
           style={{
-            top: `${Math.random() * 100}%`,
-            left: `${Math.random() * 100}%`,
+            top: `${seededRange(i, 2, 0, 100)}%`,
+            left: `${seededRange(i, 3, 0, 100)}%`,
           }}
         />
       ))}

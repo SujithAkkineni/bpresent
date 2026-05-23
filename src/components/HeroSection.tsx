@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Sparkles, Heart } from "lucide-react";
+import { seeded, seededRange } from "@/lib/utils";
 
 interface HeroSectionProps {
   onEnter: () => void;
@@ -116,18 +117,18 @@ export const HeroSection = ({ onEnter }: HeroSectionProps) => {
             y: [0, -150, 0],
             opacity: [0, 0.6, 0],
             scale: [0.3, 1, 0.3],
-            x: Math.random() > 0.5 ? 50 : -50,
+            x: seeded(i, 0) > 0.5 ? 50 : -50,
           }}
           transition={{
-            duration: 6 + Math.random() * 6,
+            duration: seededRange(i, 1, 6, 12),
             repeat: Infinity,
-            delay: Math.random() * 5,
+            delay: seededRange(i, 2, 0, 5),
             ease: "easeInOut",
           }}
           className="absolute pointer-events-none"
           style={{
-            left: `${Math.random() * 100}%`,
-            top: `${Math.random() * 100}%`,
+            left: `${seededRange(i, 3, 0, 100)}%`,
+            top: `${seededRange(i, 4, 0, 100)}%`,
           }}
         >
           {i % 3 === 0 ? (
