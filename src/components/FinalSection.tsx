@@ -22,8 +22,9 @@ export const FinalSection = () => {
         </h2>
         
         <p className="text-gray-400 text-xl md:text-2xl max-w-2xl mx-auto font-light leading-relaxed mb-12">
-          May this year bring you peace, love, unforgettable memories, success, and endless happiness. 
-          You are a constellation of everything beautiful.
+        Happy 23rd birthday to the human embodiment of “bro trust me.”
+        I was planning to continue our Cold War peacefully, but unfortunately your birthday interrupted the schedule. Anyway… happy 23rd to the most dramatic human I know.
+        Hope your day is filled with happiness and fewer imaginary arguments 😭🎂
         </p>
 
         <motion.div
@@ -39,7 +40,7 @@ export const FinalSection = () => {
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             className="px-8 py-4 glass rounded-full text-sm tracking-widest uppercase hover:bg-white/5 transition-all"
           >
-            from SUJITH AKKINENI 💫
+            from SUJITH  💫
           </button>
         </div>
       </motion.div>

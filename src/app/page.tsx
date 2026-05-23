@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { AmbientBackground } from "@/components/AmbientBackground";
 import { HeroSection } from "@/components/HeroSection";
-import { MemorySection } from "@/components/MemorySection";
 import { CandleSection } from "@/components/CandleSection";
 import { FinalSection } from "@/components/FinalSection";
 
@@ -15,8 +14,8 @@ export default function Home() {
   const handleEnter = () => {
     setHasEntered(true);
     setTimeout(() => {
-      const memorySection = document.getElementById("memory-section");
-      memorySection?.scrollIntoView({ behavior: "smooth" });
+      const mainContent = document.getElementById("main-content");
+      mainContent?.scrollIntoView({ behavior: "smooth" });
     }, 100);
   };
 
@@ -27,13 +26,12 @@ export default function Home() {
       <HeroSection onEnter={handleEnter} />
 
       <motion.div
-        id="memory-section"
+        id="main-content"
         initial={{ opacity: 0 }}
         animate={{ opacity: hasEntered ? 1 : 0 }}
         transition={{ duration: 1 }}
         style={{ pointerEvents: hasEntered ? "auto" : "none" }}
       >
-        <MemorySection />
         <CandleSection />
         <FinalSection />
       </motion.div>
