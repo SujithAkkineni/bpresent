@@ -78,7 +78,7 @@ export const HeroSection = ({ onEnter }: HeroSectionProps) => {
           transition={{ delay: 0.4, duration: 0.8 }}
           className="text-gray-300 text-base md:text-lg lg:text-xl max-w-3xl mx-auto font-light leading-relaxed mb-12 md:mb-16"
         >
-          <span className="block mb-3">You deserve every beautiful thing this universe can offer.</span>
+          <span className="block mb-3"> ah brooooooo appudey 23 ah.</span>
           <span className="text-gray-400">Let's celebrate the magic of being you.</span>
         </motion.p>
 
@@ -95,7 +95,7 @@ export const HeroSection = ({ onEnter }: HeroSectionProps) => {
           >
             <div className="absolute inset-0 bg-gradient-to-r from-pink-400 via-rose-400 to-pink-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             <span className="relative z-10 group-hover:text-white transition-colors duration-300 flex items-center justify-center gap-2 text-base md:text-lg">
-              Enter The Celebration <Heart className="w-5 h-5" />
+              e button nokku <Heart className="w-5 h-5" />
             </span>
           </button>
 
