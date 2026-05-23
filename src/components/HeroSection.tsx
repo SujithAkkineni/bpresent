@@ -29,7 +29,7 @@ export const HeroSection = ({ onEnter }: HeroSectionProps) => {
             <Sparkles className="w-10 h-10 md:w-12 md:h-12 text-pink-400" />
             <motion.div
               animate={{ rotate: 360 }}
-              transition={{ duration: 8, repeat: Infinity, linear: true }}
+              transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
               className="absolute inset-0 opacity-20"
             >
               <Sparkles className="w-10 h-10 md:w-12 md:h-12 text-pink-300" />
