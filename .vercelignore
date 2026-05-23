@@ -1,0 +1,10 @@
+.git
+.gitignore
+README.md
+*.pem
+.env.local
+.env.*.local
+node_modules
+npm-debug.log
+yarn-error.log
+.next/out/
